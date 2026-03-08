@@ -1,0 +1,116 @@
+body {
+    background-color: var(--cor-verde-escuro);
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    gap: 8px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: var(--cor-dourado);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-dourado);    
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-borda-verde);
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+select option {
+    background-color: var(--cor-verde-escuro);
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--cor-verde-escuro) inset;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.campo-senha {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo-senha input {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.ver-senha {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--cor-placeholder);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.1rem;
+    width: auto;
+    margin: 0;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+button {
+    padding: 14px;
+    background-color: var(--cor-dourado);
+    color: var(--cor-verde-escuro);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: var(--cor-dourado-hover); 
+}

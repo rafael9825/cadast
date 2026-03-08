@@ -1,0 +1,17 @@
+:root {
+    --cor-verde-escuro: #1a3a1a;
+    --cor-verde-medio:#2d5a2d;
+    --cor-dourado: #d4a017;
+    --cor-dourado-hover: #b8860b;
+    --cor-borda-verde: #3a5a3a;
+    --cor-placeholder: #aaaaaa;
+    --cor-branca: #ffffff;
+    --cor-fundo: #f0f4f8;
+    --cor-texto: #1e1e1e;
+    --cor-borda: #d1d5db;
+    --cor-sobra: rgba(0, 0, 0, 0.1);
+
+    --cor-primaria: #1a3a1a;
+    --cor-primaria-hover: #2d5a2d;
+    --cor-secundaria: #d4a017;
+}

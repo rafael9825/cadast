@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrição do meu Documento">
+    <title>Cadastro Dejeadalpe</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variaveis.css">
+    <link rel="stylesheet" href="src/css/cadastro.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img src="/src/img/IEADALPE.png" alt="Logo IEADALPE" class="logo-esquerda">
+        <div class="header-texto">
+            <p>Igreja Evangélica Assembleia de Deus</p>
+            <p>Com Sede em Abreu e Lima / PE</p>
+            <p>PR. Presidente: Roberto José dos Santos Lucena</p>
+            <p>Coord. Estadual: Iraci Soares de Souza Santos</p>
+            <p>Superintendente:Pr. Kelvin Klain</p>
+        </div>
+        <img src="/src/img/Dejeadalpe.png" alt="Logo Dejeadalpe">
+    </header>
+
+    <main>
+
+        <h1>CADERNETA GERAL DO DEJEADALPE</h1>
+
+        <form id="form-cadastro">
+
+            <h3>Dados Pessoais</h3>
+
+            <div class="dados-e-foto campo-largo">
+                <div class="campos-pessoais">
+                    <label for="cartao-membro">Nº Cartão Membro</label>
+                    <input type="text" id="cartao-membro" name="cartao-membro" placeholder="Nº do cartão">
+
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" min="10" max="100" placeholder="Idade">
+
+                    <label for="naturalidade">Naturalidade</label>
+                    <input type="text" id="naturalidade" name="naturalidade" placeholder="Cidade onde nasceu">
+
+                    <label for="nacionalidade">Nacionalidade</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade" placeholder="Ex: Brasileiro (a)">
+                </div>
+
+                <div class="campo-foto">
+                    <label>Foto</label>
+                    <div class="area-foto">
+                        <img id="preview-foto" src="" alt="">
+                        <span id="texto-foto">📷 Clique para adicionar foto</span>
+                        <input type="file" id="foto" name="foto" accept="image/*">
+                    </div>
+                </div>
+            </div>
+
+            <label for="congregacao">Congregação</label>
+            <input type="text" id="congregacao" name="congregacao" placeholder="Nome da congregação">
+
+            <label for="area">Área</label>
+            <input type="text" id="area" name="area" placeholder="Digite sua área" required>
+
+            <label for="grau-instucao">Grau de Instrução</label>
+            <input type="text" id="grau-instrucao" name="grau-instrucao" placeholder="Ex: Ensino Médio" required>
+
+            <h3>Filiação do Adolescente</h3>
+
+            <label for="nome-pai">Nome do Pai</label>
+            <input type="text" id="nome-pai" name="nome-pai" placeholder="Nome do Pai">
+
+            <label for="nome-mae">Nome da Mãe</label>
+            <input type="text" id="nome-mae" name="nome-mae" placeholder="Nome da Mãe">
+
+            <h3>Endereço Residencial</h3>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Rua, número" required>
+
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" name="estado" placeholder="Estado" required>
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+
+            <label for="celula">Célula</label>
+            <input type="text" id="celula" name="celula" placeholder="(81) 9. 0000-0000" equired>
+
+            <h3>Informações Religiosas</h3>
+
+            <label for="frequenta-ebd">Frequenta EBD?</label>
+            <select id="frequenta-ebd" name="frequenta-ebd" required>
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="frequenta-doutrina">Frequenta Doutrina?</label>
+            <select id="frequenta-doutrina" name="frequenta-doutrina" required>
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="batismo-espirito">Batizado com Espírito Santo?</label>
+            <select id="batismo-espirito" name="batismo-espirito" required>
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="batismo-aguas">Batizado nas Águas?</label>
+            <select id="batismo-aguas" name="batismo-aguas" required>
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label>Evangélico?</label>
+            <select id="evangelico" name="evangelico">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <h3>Informações Pessoais</h3>
+
+            <label for="lazer">Lazer que gosta</label>
+            <input type="text" id="lazer" name="lazer" placeholder="Ex: Futebol, leitura, música..." required>
+
+            <label for="aborrece">O que mais lhe aborrece?</label>
+            <input type="text" id="aborrece" name="aborrece" placeholder="Ex: Chover, filas, etc..." required>
+
+            <label for="tratado">Como gosta de ser tratado?</label>
+            <input type="text" id="tratado" name="tratado" placeholder="Ex: João, Rafael, José, Maria, Ester..."
+                required>
+
+            <label for="cor-preferida">Cor preferida</label>
+            <input type="text" id="cor-preferida" name="cor-preferida" placeholder="Ex: Azul, vermelho, verde..."
+                required>
+
+            <label for="gosta-biblia">Gosta de ler a Bíblia?</label>
+            <select id="gosta-biblia" name="gosta-biblia">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="funcao">Função na igreja</label>
+            <select id="funcao" name="funcao" required>
+                <option value="">Selecione</option>
+                <option value="1-dirigente">1° Dirigente</option>
+                <option value="2-dirigente">2° Dirigente</option>
+                <option value="1-secretario">1° Secretario (a)</option>
+                <option value="2-secretario">2° Secretario (a)</option>
+                <option value="3-secretario">3° Secretario (a)</option>
+                <option value="1-maestro">1° Maestro</option>
+                <option value="2-maestro">2° Maestro</option>
+                <option value="1-maestrina">1° Maestrina</option>
+                <option value="2-maestrina">2° Maestrina</option>
+                <option value="3-maestrina">3° Maestrina</option>
+                <option value="conselheiro">Conselheiro (a)</option>
+                <option value="componente">Componente</option>
+            </select>
+
+            <button type="submit">Cadastrar</button>
+            <output id="mensagem"></output>
+            <button type="button" id="btn-pdf">📄 Gerar PDF</button>
+        </form>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="src/js/cadastro.js"></script>
+
+
+</body>
+
+</html>

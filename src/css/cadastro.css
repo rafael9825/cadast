@@ -1,0 +1,233 @@
+body {
+    background-color: var(--cor-fundo);
+    font-family: 'inter', sans-serif;
+    color: var(--cor-texto);
+    padding: 40px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.header-texto {
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.logo-esquerda {
+    margin-right: 20px;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-branca);
+    background-color: var(--cor-primaria);
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    grid-column: 1 / -1;
+}
+
+form {
+    background-color: var(--cor-branca);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--cor-sobra);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+.dados-e-foto {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    grid-column: 1 / -1;
+}
+
+.campos-pessoais {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+
+.campos-pessoais label {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+}
+
+.campos-pessoais input {
+    padding: 7px 10px;
+    font-size: 0.85rem;
+}
+
+.campo-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.area-foto {
+    width: 110px;
+    height: 140px;
+    border: 2px dashed #cccccc;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.area-foto input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.area-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+#texto-foto {
+    font-size: 0.75rem;
+    color: var(--cor-placeholder);
+    text-align: center;
+    padding: 6px;
+}
+
+
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    color: var(--cor-primaria);
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--cor-borda-verde);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    color: var(--cor-texto);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--cor-dourado);
+    background-color: #fffdf0;
+}
+
+.campo-largo {
+    grid-column: 1 / -1;
+}
+
+output {
+    margin-top: 8px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+    grid-column: 1 / -1;
+}
+
+.sucesso {
+    background-color: #1dfae5;
+    color: #065f46;
+    display: block;
+}
+
+.erro {
+    background-color: #fee2e2;
+    color: #991b1b;
+    display: block;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    grid-column: 1 / -1;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+#btn-pdf {
+    display: none;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    grid-column: 1 / -1;
+    margin-top: 8px;
+}
+
+#btn-pdf:hover {
+    background-color: var(--cor-dourado-hover);
+}

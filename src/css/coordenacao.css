@@ -1,0 +1,121 @@
+body {
+    background-color: var(--cor-verde-escuro);
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.header-texto {
+    text-align: center;
+    color: var(--cor-dourado);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.header-texto p:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--cor-dourado);
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-verde-escuro);
+    background-color: var(--cor-dourado);
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.card img.foto-pastor {
+    object-position: center 50%;
+}
+
+.secao-coord, .secao-coord {
+    margin-bottom: 40px;
+}
+
+.grupo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--cor-verde-medio);
+    border: 1px solid var(--cor-dourado);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    width: 180px;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top; 
+    border-radius: 50%;
+    border: 3px solid var(--cor-dourado);
+    margin-bottom: 10px;
+}
+
+.card .cargo {
+    font-size: 0.8rem;
+    color: var(--cor-dourado);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card .nome {
+    font-size: 0.85rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    color: var(--cor-dourado);
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.85rem;
+}
+

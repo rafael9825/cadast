@@ -1,0 +1,208 @@
+/* ================================
+   MÉDIO (max 1035px)
+================================ */
+@media (max-width: 1035px) {
+
+    nav {
+        position: relative;
+        justify-content: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    body {
+        padding-top: 0;
+    }
+}
+
+/* ================================
+   TABLET (max 768px)
+================================ */
+@media (max-width: 768px) {
+
+    /* GERAL */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-texto {
+        text-align: center;
+        font-size: 0.8rem;
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    /* LOGIN */
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+
+    /* CADASTRO */
+    form {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .dados-e-foto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campos-pessoais {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .campo-foto {
+        width: 100%;
+        align-items: center;
+    }
+
+    /* COORDENAÇÃO */
+    .card {
+        width: 150px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* ESQUECI SENHA */
+    .header-esqueci img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ================================
+   CELULAR (max 480px)
+================================ */
+@media (max-width: 480px) {
+
+    /* GERAL */
+    body {
+        padding: 16px 10px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header-texto {
+        text-align: center;
+        font-size: 0.75rem;
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+
+    /* LOGIN */
+    nav {
+        position: relative;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem;
+    }
+
+    /* CADASTRO */
+    form {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .dados-e-foto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campos-pessoais {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .campo-largo {
+        grid-column: 1;
+    }
+
+    h3 {
+        grid-column: 1;
+    }
+
+    /* COORDENAÇÃO */
+    .grupo-cards {
+        gap: 12px;
+    }
+
+    .card {
+        width: 130px;
+        padding: 10px;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card .nome {
+        font-size: 0.75rem;
+    }
+
+    /* LIDERANÇA */
+    .container {
+        width: 95%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    /* ESQUECI SENHA */
+    .header-esqueci img {
+        width: 130px;
+        height: 130px;
+    }
+}
