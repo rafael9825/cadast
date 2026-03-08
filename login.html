@@ -10,45 +10,50 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/variaveis.css">
     <link rel="stylesheet" href="src/css/login.css">
-        
+    <link rel="stylesheet" href="src/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body> 
-    
+<body>
+
     <nav>
-            <ul>
-                <li><a href="coordenacao.html" target="_blank">Coordenação Geral</a></li>
-                <li><a href="#">Regimento do DEJEADALPE</a></li>
-                <li><a href="#">Agenda Anual</a></li>
-            </ul>
-        </nav>
+        <ul>
+            <li><a href="coordenacao.html" target="_blank">Coordenação Geral</a></li>
+            <li><a href="#">Regimento do DEJEADALPE</a></li>
+            <li><a href="#">Agenda Anual</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <img src="src/img/Dejeadalpe.png" alt="">
-    </header>    
+    <main>
 
-    <main>       
+        <header>
+            <img src="src/img/Dejeadalpe.png" alt="Logo Dejeadalpe">
+        </header>
 
-             <h1>CADERNETA DO DEJEADALPE</h1>        
+        <h1>CADERNETA DO DEJEADALPE</h1>
 
-        <form>
+        <form id="form-login">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Digite seu email">
 
             <div class="campo-senha">
-                <input type="password" id="senha" nome="senha" placeholder="Digite sua senha" autocomplete="new-password">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="new-password">
                 <button type="button" id="ver-senha">👁</button>
             </div>
 
             <button type="submit">LOGIN</button>
 
-           <a href="esqueci-senha.html">Esqueci a senha</a>
+            <a href="esqueci-senha.html">Esqueci a senha</a>
         </form>
-        
-            <a href="cadastro-lideranca.html" target="_blank">Cadastre-se Aqui</a>        
+
+        <a href="cadastro-lideranca.html" target="_blank">Cadastre-se Aqui</a>
+
     </main>
 
     <script src="src/js/login.js"></script>
+
 </body>
 
 </html>
