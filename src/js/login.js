@@ -1,13 +1,13 @@
-const verSenha = document.getElementById('ver-senha');
-const inputSenha = document.getElementById('senha');
+const verSenha = document.getElementById('ver-senha')
+const inputSenha = document.getElementById('senha')
 
 verSenha.addEventListener('click', function() {
     if (inputSenha.type === 'password') {
-        inputSenha.type = 'text';
-        verSenha.textContent = '👀';
+        inputSenha.type = 'text'
+        verSenha.textContent = '👀'
     } else {
-        inputSenha.type = 'password';
-        verSenha.textContent = '👁';
+        inputSenha.type = 'password'
+        verSenha.textContent = '👁'
     }
 })
 
@@ -20,7 +20,17 @@ formulario.addEventListener('submit', function(event) {
     const email = document.getElementById('email').value
     const senha = document.getElementById('senha').value
 
-    fetch(URL_SCRIPT + '?email=' + email + '&senha=' + senha)
+    // Validação da senha: 8 a 20 caracteres
+    if (senha.length < 8 || senha.length > 20) {
+        alert('A senha deve ter entre 8 e 20 caracteres!')
+        return
+    }
+
+    // encodeURIComponent corrige os caracteres especiais na URL
+    const emailCodificado = encodeURIComponent(email)
+    const senhaCodificada = encodeURIComponent(senha)
+
+    fetch(URL_SCRIPT + '?email=' + emailCodificado + '&senha=' + senhaCodificada)
     .then(response => response.json())
     .then(result => {
         if (result.resultado === 'sucesso') {
@@ -32,5 +42,4 @@ formulario.addEventListener('submit', function(event) {
     .catch(error => {
         alert('Erro ao fazer login. Tente novamente.')
     })
-
 })

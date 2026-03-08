@@ -8,7 +8,9 @@ document.getElementById('form-recuperar').addEventListener('submit', function(ev
     const email = document.getElementById('email').value
     const mensagem = document.getElementById('mensagem')
 
-    fetch(URL_SCRIPT + '?email=' + email)
+    const emailCodificado = encodeURIComponent(email)
+
+    fetch(URL_SCRIPT + '?email=' + emailCodificado)
     .then(response => response.json())
     .then(result => {
         if (result.resultado === 'sucesso') {

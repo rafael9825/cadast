@@ -1,4 +1,5 @@
-const formulario = document.getElementById('form-lideranca');
+
+    const formulario = document.getElementById('form-lideranca')
 const botoesVerSenha = document.querySelectorAll('.ver-senha')
 
 botoesVerSenha.forEach(function(botao) {
@@ -16,15 +17,44 @@ botoesVerSenha.forEach(function(botao) {
 
 const URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbyY1_S5vtwQOg2lCg_2KDS2Bd-mrXtOnA0cUxSoD9l5WFVEzbV-SVyRi6w1I-xs7iUC/exec'
 
-
 formulario.addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const senha = document.getElementById('senha').value;
-    const confirmarSenha = document.getElementById('confirmar-senha').value;
+    const senha = document.getElementById('senha').value
+    const confirmarSenha = document.getElementById('confirmar-senha').value
+
+    // Validação: 8 a 20 caracteres
+    if (senha.length < 8 || senha.length > 20) {
+        alert('A senha deve ter entre 8 e 20 caracteres!')
+        return
+    }
+
+    // Validação: letras maiúsculas
+    if (!/[A-Z]/.test(senha)) {
+        alert('A senha deve ter pelo menos uma letra maiúscula!')
+        return
+    }
+
+    // Validação: letras minúsculas
+    if (!/[a-z]/.test(senha)) {
+        alert('A senha deve ter pelo menos uma letra minúscula!')
+        return
+    }
+
+    // Validação: números
+    if (!/[0-9]/.test(senha)) {
+        alert('A senha deve ter pelo menos um número!')
+        return
+    }
+
+    // Validação: caracteres especiais
+    if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha)) {
+        alert('A senha deve ter pelo menos um caractere especial!')
+        return
+    }
 
     if (senha !== confirmarSenha) {
-        alert('As senhas não coincidem.!')
+        alert('As senhas não coincidem!')
         return
     }
 
@@ -48,4 +78,3 @@ formulario.addEventListener('submit', function(event) {
         alert('Erro ao cadastrar. Tente novamente.')
     })
 })
-    
