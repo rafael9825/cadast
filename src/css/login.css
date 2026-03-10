@@ -1,9 +1,10 @@
 body {
     background-color: #1a3a1a;
-    background-image: url('../img/terra.png');
-    background-size: 150% 108%;
-    background-position: center center;
+    background-image: url('../img/imagem-do-login.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
     height: 100vh;
@@ -38,7 +39,7 @@ nav ul {
 
 nav ul li a {
     color: var(--cor-verde-escuro);
-    background-color: rgba(212, 160, 23, 0.6);
+    background-color: rgba(212, 160, 23, 100%);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
@@ -55,7 +56,6 @@ nav ul li a:hover {
     background-color: rgba(212, 160, 23, 100%);
     color: var(--cor-verde-escuro);
     transform: scale(1.05);
-    
 }
 
 header {
@@ -198,6 +198,11 @@ a:hover {
 
 /* TABLET */
 @media (max-width: 768px) {
+    body {
+        background-image: url('../img/imagem-do-login-mobile.png');
+        background-attachment: scroll;
+    }
+
     nav {
         position: relative;
         top: auto;
@@ -233,9 +238,12 @@ a:hover {
 /* CELULAR */
 @media (max-width: 480px) {
     body {
-        height: auto;
-        min-height: 100vh;
-        overflow-y: auto;
+        background-image: url('../img/imagem-do-login-mobile.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        height: 100vh;
+        overflow: hidden;
     }
 
     nav {
@@ -276,7 +284,7 @@ a:hover {
     }
 
     header img {
-        width: 250px;
+        width: 200px;
         height: auto;
     }
 
