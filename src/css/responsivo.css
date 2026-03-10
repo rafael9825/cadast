@@ -121,7 +121,8 @@
 
     .header-texto {
         text-align: center;
-        font-size: 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 700;
         flex: 1;
     }
 

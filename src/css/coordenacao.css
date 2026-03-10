@@ -1,5 +1,10 @@
 body {
     background-color: var(--cor-verde-escuro);
+    background-image: url('../img/foto-coordenaca.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
     padding: 20px;
@@ -23,13 +28,14 @@ header img {
 .header-texto {
     text-align: center;
     color: var(--cor-dourado);
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .header-texto p:first-child {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 main {
@@ -43,6 +49,7 @@ h1 {
     text-align: center;
     letter-spacing: 3px;
     margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
@@ -50,6 +57,7 @@ h2 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 h3 {
