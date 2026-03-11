@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta - DEJEADALPE</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variaveis.css">
+    <link rel="stylesheet" href="src/css/consulta.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img src="src/img/IEADALPE.png" alt="Logo IEADALPE">
+        <div class="header-texto">
+            <p>Igreja Evangélica Assembleia de Deus</p>
+            <p>Com Sede em Abreu e Lima / PE</p>
+            <p>PR. Presidente: Roberto José dos Santos Lucena</p>
+            <p>Coord. Estadual: Iraci Soares de Souza Santos</p>
+            <p>Superintendente: Pr. Kelvin Klain</p>
+        </div>
+        <img src="src/img/Dejeadalpe.png" alt="Logo Dejeadalpe">
+    </header>
+
+    <main>
+        <h1>CONSULTA DE CADASTROS</h1>
+        <h2>DEJEADALPE</h2>
+
+        <!-- TELA DE LOGIN -->
+        <div id="tela-login">
+            <form id="form-consulta-login">
+                <input type="email" id="email-consulta" placeholder="Digite seu email" required aria-label="Email">
+                <div class="campo-senha">
+                    <input type="password" id="senha-consulta" placeholder="Digite sua senha" required aria-label="Senha">
+                    <button type="button" class="ver-senha" id="ver-senha-consulta">👁</button>
+                </div>
+                <input type="text" id="area-consulta" placeholder="Digite o número da área" required aria-label="Área">
+                <button type="submit">🔍 Acessar</button>
+                <output id="mensagem-consulta"></output>
+            </form>
+        </div>
+
+        <!-- TELA DE RESULTADO -->
+        <div id="tela-resultado" style="display:none">
+            <div id="resultado-busca"></div>
+            <div id="detalhes-pessoa" style="display:none">
+                <button id="btn-voltar">← Voltar</button>
+                <div id="info-pessoa"></div>
+                <button id="btn-pdf-consulta">📄 Gerar PDF</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>DEJEADALPE © 2026</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="src/js/consulta.js"></script>
+
+</body>
+</html>

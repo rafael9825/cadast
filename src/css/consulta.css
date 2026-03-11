@@ -1,0 +1,430 @@
+body {
+    background-color: var(--cor-verde-escuro);
+    background-image: url('../img/foto-coordenaca.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.header-texto {
+    text-align: center;
+    color: var(--cor-dourado);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1),
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px 1px 0 #000;
+}
+
+.header-texto p:first-child {
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--cor-dourado);
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    font-weight: 900;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1),
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px 1px 0 #000;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1),
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px 1px 0 #000;
+}
+
+/* TELA DE LOGIN */
+#tela-login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#form-consulta-login {
+    background-color: rgba(26, 58, 26, 0.6);
+    border: 1px solid var(--cor-dourado);
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        8px 8px 16px #0d1f0d,
+        -8px -8px 16px #275527;
+}
+
+#form-consulta-login input {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1a3a1a;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    box-shadow:
+        inset 4px 4px 8px #0d1f0d,
+        inset -4px -4px 8px #275527;
+}
+
+#form-consulta-login input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+#form-consulta-login input:focus {
+    box-shadow:
+        inset 6px 6px 12px #0d1f0d,
+        inset -2px -2px 6px #275527,
+        0 0 0 2px var(--cor-dourado);
+}
+
+#form-consulta-login button[type="submit"] {
+    padding: 14px;
+    background-color: #1a3a1a;
+    color: var(--cor-dourado);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow:
+        4px 4px 8px #0d1f0d,
+        -4px -4px 8px #275527;
+}
+
+#form-consulta-login button[type="submit"]:hover {
+    box-shadow:
+        inset 4px 4px 8px #0d1f0d,
+        inset -4px -4px 8px #275527;
+    color: var(--cor-dourado-hover);
+}
+
+.campo-senha {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo-senha input {
+    width: 100%;
+}
+
+.ver-senha {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--cor-placeholder);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.1rem;
+    width: auto;
+    box-shadow: none !important;
+}
+
+.ver-senha:hover {
+    color: var(--cor-dourado);
+    box-shadow: none !important;
+}
+
+#mensagem-consulta {
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* LISTA DE PESSOAS */
+.busca {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.busca input {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-dourado);
+    background-color: var(--cor-verde-medio);
+    color: #ffffff;
+    font-size: 1rem;
+    width: 300px;
+    outline: none;
+}
+
+.busca input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+.busca input:focus {
+    border-color: var(--cor-dourado);
+    box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.3);
+}
+
+.busca button {
+    padding: 12px 24px;
+    background-color: var(--cor-dourado);
+    color: var(--cor-verde-escuro);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.busca button:hover {
+    background-color: var(--cor-dourado-hover);
+}
+
+.lista-pessoas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titulo-resultado {
+    font-size: 1rem;
+    color: var(--cor-dourado);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.card-pessoa {
+    background-color: var(--cor-verde-medio);
+    border: 1px solid var(--cor-dourado);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-pessoa:hover {
+    background-color: var(--cor-dourado);
+    color: var(--cor-verde-escuro);
+}
+
+.card-pessoa span {
+    font-size: 1.5rem;
+}
+
+.card-pessoa p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* DETALHES DA PESSOA */
+#btn-voltar {
+    background-color: transparent;
+    color: var(--cor-dourado);
+    border: 1px solid var(--cor-dourado);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#btn-voltar:hover {
+    background-color: var(--cor-dourado);
+    color: var(--cor-verde-escuro);
+}
+
+.info-grid {
+    background-color: var(--cor-verde-medio);
+    border: 1px solid var(--cor-dourado);
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-item span:first-child {
+    font-size: 0.75rem;
+    color: var(--cor-dourado);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-item span:last-child {
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.info-titulo {
+    font-size: 1.3rem;
+    color: var(--cor-dourado);
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#btn-pdf-consulta {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--cor-dourado);
+    color: var(--cor-verde-escuro);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+#btn-pdf-consulta:hover {
+    background-color: var(--cor-dourado-hover);
+}
+
+footer {
+    text-align: center;
+    color: var(--cor-dourado);
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1),
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px 1px 0 #000;
+    flex-shrink: 0;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-texto {
+        font-size: 0.8rem;
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 16px;
+    }
+
+    #form-consulta-login {
+        padding: 24px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header-texto {
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 0.95rem;
+    }
+
+    #form-consulta-login {
+        padding: 20px 16px;
+        max-width: 95%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+}
