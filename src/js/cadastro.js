@@ -22,6 +22,11 @@ document.getElementById('foto').addEventListener('change', function() {
 formulario.addEventListener('submit', function(evento) {
     evento.preventDefault()
 
+    if (!fotoBase64) {
+        alert('📷 A foto é obrigatória! Por favor, tire uma foto para continuar.')
+        return
+    }
+
     const dados = {
         cartaoMembro: document.getElementById('cartao-membro').value,
         nome: document.getElementById('nome').value,
@@ -70,6 +75,9 @@ formulario.addEventListener('submit', function(evento) {
         ultimoCadastro = { ...dados }
 
         formulario.reset()
+        fotoBase64 = ''
+        document.getElementById('preview-foto').style.display = 'none'
+        document.getElementById('texto-foto').style.display = 'block'
     })
     .catch(error => {
         const mensagem = document.getElementById('mensagem')
