@@ -37,7 +37,8 @@
             <form id="form-consulta-login">
                 <input type="email" id="email-consulta" placeholder="Digite seu email" required aria-label="Email">
                 <div class="campo-senha">
-                    <input type="password" id="senha-consulta" placeholder="Digite sua senha" required aria-label="Senha">
+                    <input type="password" id="senha-consulta" placeholder="Digite sua senha" required
+                        aria-label="Senha">
                     <button type="button" class="ver-senha" id="ver-senha-consulta">👁</button>
                 </div>
                 <input type="text" id="area-consulta" placeholder="Digite o número da área" required aria-label="Área">
@@ -47,9 +48,9 @@
         </div>
 
         <!-- TELA DE RESULTADO -->
-        <div id="tela-resultado" style="display:none">
+        <div id="tela-resultado">
             <div id="resultado-busca"></div>
-            <div id="detalhes-pessoa" style="display:none">
+            <div id="detalhes-pessoa">
                 <button id="btn-voltar">← Voltar</button>
                 <div id="info-pessoa"></div>
                 <button id="btn-pdf-consulta">📄 Gerar PDF</button>
@@ -66,4 +67,5 @@
     <script src="src/js/consulta.js"></script>
 
 </body>
+
 </html>
