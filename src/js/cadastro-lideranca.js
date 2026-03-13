@@ -1,5 +1,4 @@
-
-    const formulario = document.getElementById('form-lideranca')
+const formulario = document.getElementById('form-lideranca')
 const botoesVerSenha = document.querySelectorAll('.ver-senha')
 
 botoesVerSenha.forEach(function(botao) {
@@ -23,31 +22,26 @@ formulario.addEventListener('submit', function(event) {
     const senha = document.getElementById('senha').value
     const confirmarSenha = document.getElementById('confirmar-senha').value
 
-    // Validação: 8 a 20 caracteres
     if (senha.length < 8 || senha.length > 20) {
         alert('A senha deve ter entre 8 e 20 caracteres!')
         return
     }
 
-    // Validação: letras maiúsculas
     if (!/[A-Z]/.test(senha)) {
         alert('A senha deve ter pelo menos uma letra maiúscula!')
         return
     }
 
-    // Validação: letras minúsculas
     if (!/[a-z]/.test(senha)) {
         alert('A senha deve ter pelo menos uma letra minúscula!')
         return
     }
 
-    // Validação: números
     if (!/[0-9]/.test(senha)) {
         alert('A senha deve ter pelo menos um número!')
         return
     }
 
-    // Validação: caracteres especiais
     if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha)) {
         alert('A senha deve ter pelo menos um caractere especial!')
         return
@@ -71,7 +65,11 @@ formulario.addEventListener('submit', function(event) {
     })
     .then(response => response.json())
     .then(result => {
-        alert('Cadastro realizado com sucesso!')
+        if (result.resultado === 'duplicado') {
+            alert('❌ Este email já está cadastrado! Use outro email.')
+            return
+        }
+        alert('✅ Cadastro realizado com sucesso!')
         formulario.reset()
     })
     .catch(error => {

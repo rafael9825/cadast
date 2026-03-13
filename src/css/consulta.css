@@ -193,49 +193,6 @@ h2 {
 }
 
 /* LISTA DE PESSOAS */
-.busca {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.busca input {
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: 1px solid var(--cor-dourado);
-    background-color: var(--cor-verde-medio);
-    color: #ffffff;
-    font-size: 1rem;
-    width: 300px;
-    outline: none;
-}
-
-.busca input::placeholder {
-    color: var(--cor-placeholder);
-}
-
-.busca input:focus {
-    border-color: var(--cor-dourado);
-    box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.3);
-}
-
-.busca button {
-    padding: 12px 24px;
-    background-color: var(--cor-dourado);
-    color: var(--cor-verde-escuro);
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.busca button:hover {
-    background-color: var(--cor-dourado-hover);
-}
-
 .lista-pessoas {
     display: flex;
     flex-direction: column;
