@@ -24,8 +24,7 @@ document.getElementById('form-consulta-login').addEventListener('submit', functi
         .then(response => response.json())
         .then(result => {
             if (result.resultado === 'sucesso') {
-                // LOGIN OK - buscar área
-                return fetch(URL_SCRIPT + '?area=' + encodeURIComponent(area))
+                return fetch(URL_SCRIPT + '?area=' + encodeURIComponent('Área ' + area))
                     .then(response => response.json())
                     .then(resultArea => {
                         if (resultArea.resultado === 'sucesso' && resultArea.dados.length > 0) {
