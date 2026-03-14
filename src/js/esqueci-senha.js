@@ -14,8 +14,8 @@ document.getElementById('form-recuperar').addEventListener('submit', function(ev
     .then(response => response.json())
     .then(result => {
         if (result.resultado === 'sucesso') {
-            emailjs.send('service_tdq09ej', 'template_1ydd81n', {
-                email_destino: email,
+            emailjs.send('service_tdq09ej', 'template_c76jizq', {
+                email: email,
                 senha: result.senha
             })
             .then(function() {
