@@ -35,17 +35,27 @@
 
         <!-- TELA DE LOGIN -->
         <div id="tela-login">
-    <form id="form-consulta-login">
-        <input type="email" id="email-consulta" placeholder="Digite seu email" required aria-label="Email">
-        <div class="campo-senha">
-            <input type="password" id="senha-consulta" placeholder="Digite sua senha" required aria-label="Senha">
-            <button type="button" class="ver-senha" id="ver-senha-consulta">👁</button>
+            <form id="form-consulta-login">
+                <input type="email" id="email-consulta" placeholder="Digite seu email" required aria-label="Email">
+                <div class="campo-senha">
+                    <input type="password" id="senha-consulta" placeholder="Digite sua senha" required aria-label="Senha" autocomplete="new-password">
+                    <button type="button" class="ver-senha" id="ver-senha-consulta" aria-label="Ver senha">👁</button>
+                </div>
+                <input type="text" id="area-consulta" placeholder="Área (ex: 23)" required aria-label="Área">
+                <button type="submit" aria-label="Acessar consulta">🔍 Acessar</button>
+                <output id="mensagem-consulta"></output>
+            </form>
         </div>
-        <input type="text" id="area-consulta" placeholder="Área (ex: 23)" required aria-label="Área">
-        <button type="submit">🔍 Acessar</button>
-        <output id="mensagem-consulta"></output>
-    </form>
-</div>
+
+        <!-- TELA DE RESULTADO -->
+        <div id="tela-resultado">
+            <div id="resultado-busca"></div>
+            <div id="detalhes-pessoa">
+                <button type="button" id="btn-voltar" aria-label="Voltar para lista">← Voltar</button>
+                <div id="info-pessoa"></div>
+                <button type="button" id="btn-pdf-consulta" aria-label="Gerar PDF">📄 Gerar PDF</button>
+            </div>
+        </div>
 
     </main>
 

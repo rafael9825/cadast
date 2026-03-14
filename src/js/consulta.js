@@ -30,7 +30,6 @@ document.getElementById('form-consulta-login').addEventListener('submit', functi
                         if (resultArea.resultado === 'sucesso' && resultArea.dados.length > 0) {
                             document.getElementById('tela-login').style.display = 'none'
                             document.getElementById('tela-resultado').style.display = 'block'
-
                             window.listaPessoas = resultArea.dados
                             mostrarLista(area, resultArea.dados)
                         } else {
@@ -116,73 +115,91 @@ function verDetalhes(index) {
     document.getElementById('info-pessoa').innerHTML = html
 }
 
-document.getElementById('btn-voltar').addEventListener('click', function () {
-    document.getElementById('detalhes-pessoa').style.display = 'none'
-    document.getElementById('resultado-busca').style.display = 'block'
-})
-
-document.getElementById('btn-pdf-consulta').addEventListener('click', function () {
-    const { jsPDF } = window.jspdf
-    const doc = new jsPDF()
-
-    function formatarData(data) {
-        if (!data) return '—'
-        const partes = String(data).split('-')
-        if (partes.length === 3) return partes[2] + '/' + partes[1] + '/' + partes[0]
-        return data
+// USANDO DELEGAÇÃO DE EVENTOS PARA BTN-VOLTAR E BTN-PDF
+document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'btn-voltar') {
+        document.getElementById('detalhes-pessoa').style.display = 'none'
+        document.getElementById('resultado-busca').style.display = 'block'
     }
 
-    function formatarSim(valor) {
-        return valor === 'sim' ? 'Sim' : 'Não'
-    }
+    if (e.target && e.target.id === 'btn-pdf-consulta') {
+        const { jsPDF } = window.jspdf
+        const doc = new jsPDF()
 
-    const imgOficial = new Image()
-    imgOficial.src = 'src/img/dejeadalpe-oficial.png'
+        function formatarData(data) {
+            if (!data) return '—'
+            const partes = String(data).split('-')
+            if (partes.length === 3) return partes[2] + '/' + partes[1] + '/' + partes[0]
+            return data
+        }
 
-    const imgIEADALPE = new Image()
-    imgIEADALPE.src = 'src/img/IEADALPE.png'
+        function formatarSim(valor) {
+            return valor === 'sim' ? 'Sim' : 'Não'
+        }
 
-    const imgDEJEADALPE = new Image()
-    imgDEJEADALPE.src = 'src/img/Dejeadalpe.png'
+        const imgIEADALPE = new Image()
+        imgIEADALPE.src = 'src/img/IEADALPE.png'
 
-    imgOficial.onload = function () {
-        doc.addImage(imgOficial, 'PNG', 0, 0, 210, 297)
-        doc.addImage(imgIEADALPE, 'PNG', 15, 5, 30, 30)
-        doc.addImage(imgDEJEADALPE, 'PNG', 165, 5, 30, 30)
+        const imgDEJEADALPE = new Image()
+        imgDEJEADALPE.src = 'src/img/Dejeadalpe.png'
 
-        doc.setFontSize(14)
-        doc.setTextColor(26, 58, 26)
-        doc.text('Igreja Evangélica Assembleia de Deus', 105, 15, { align: 'center' })
-        doc.text('Convenção em Abreu e Lima-PE', 105, 22, { align: 'center' })
+        imgIEADALPE.onload = function () {
+            doc.addImage(imgIEADALPE, 'PNG', 15, 5, 30, 30)
+            doc.addImage(imgDEJEADALPE, 'PNG', 165, 5, 30, 30)
 
-        doc.setFontSize(12)
-        doc.setTextColor(212, 160, 23)
-        doc.text('DEJEADALPE', 105, 30, { align: 'center' })
+            // CABEÇALHO
+            doc.setFontSize(16)
+            doc.setTextColor(212, 160, 23)
+            doc.text('Igreja Evangélica Assembleia de Deus', 105, 15, { align: 'center' })
+            doc.setFontSize(13)
+            doc.text('Com Sede em Abreu e Lima / PE', 105, 23, { align: 'center' })
+            doc.setFontSize(11)
+            doc.setTextColor(0, 0, 0)
+            doc.text('PR. Presidente: Roberto José dos Santos Lucena', 105, 30, { align: 'center' })
+            doc.text('Coord. Estadual: Iraci Soares de Souza Santos', 105, 37, { align: 'center' })
+            doc.text('Superintendente: Pr. Kelvin Klain', 105, 44, { align: 'center' })
 
-        doc.setDrawColor(212, 160, 23)
-        doc.line(15, 38, 195, 38)
+            doc.setDrawColor(212, 160, 23)
+            doc.line(15, 48, 195, 48)
 
-        doc.setFontSize(11)
-        doc.setTextColor(0, 0, 0)
-        doc.text('Nome: ' + (pessoaSelecionada.nome || '—'), 20, 50)
-        doc.text('Nascimento: ' + formatarData(pessoaSelecionada.nascimento), 20, 60)
-        doc.text('Idade: ' + (pessoaSelecionada.idade || '—'), 20, 70)
-        doc.text('Naturalidade: ' + (pessoaSelecionada.naturalidade || '—'), 20, 80)
-        doc.text('Nacionalidade: ' + (pessoaSelecionada.nacionalidade || '—'), 20, 90)
-        doc.text('Congregação: ' + (pessoaSelecionada.congregacao || '—'), 20, 100)
-        doc.text('Área: ' + (pessoaSelecionada.area || '—'), 20, 110)
-        doc.text('Nome do Pai: ' + (pessoaSelecionada.nomePai || '—'), 20, 120)
-        doc.text('Nome da Mãe: ' + (pessoaSelecionada.nomeMae || '—'), 20, 130)
-        doc.text('Endereço: ' + (pessoaSelecionada.endereco || '—'), 20, 140)
-        doc.text('Bairro: ' + (pessoaSelecionada.bairro || '—'), 20, 150)
-        doc.text('Cidade: ' + (pessoaSelecionada.cidade || '—'), 20, 160)
-        doc.text('Batismo Espírito: ' + formatarSim(pessoaSelecionada.batismoEspirito), 20, 170)
-        doc.text('Batismo Águas: ' + formatarSim(pessoaSelecionada.batismoAguas), 20, 180)
-        doc.text('Função: ' + (pessoaSelecionada.funcao || '—'), 20, 190)
+            doc.setFontSize(15)
+            doc.setTextColor(212, 160, 23)
+            doc.text('DEJEADALPE', 105, 55, { align: 'center' })
 
-        doc.setDrawColor(212, 160, 23)
-        doc.line(15, 200, 195, 200)
+            doc.setDrawColor(212, 160, 23)
+            doc.line(15, 59, 195, 59)
 
-        doc.save(pessoaSelecionada.nome + '.pdf')
+            // DADOS
+            doc.setFontSize(13)
+
+            function linha(rotulo, valor, y) {
+                doc.setTextColor(212, 160, 23)
+                doc.text(rotulo, 20, y)
+                doc.setTextColor(0, 0, 0)
+                doc.text(String(valor || '—'), 20 + doc.getTextWidth(rotulo) + 2, y)
+            }
+
+            linha('Nome:', pessoaSelecionada.nome, 70)
+            linha('Nascimento:', formatarData(pessoaSelecionada.nascimento), 80)
+            linha('Idade:', pessoaSelecionada.idade, 90)
+            linha('Naturalidade:', pessoaSelecionada.naturalidade, 100)
+            linha('Nacionalidade:', pessoaSelecionada.nacionalidade, 110)
+            linha('Congregação:', pessoaSelecionada.congregacao, 120)
+            linha('Área:', pessoaSelecionada.area, 130)
+            linha('Grau de Instrução:', pessoaSelecionada.grauInstrucao, 140)
+            linha('Nome do Pai:', pessoaSelecionada.nomePai, 150)
+            linha('Nome da Mãe:', pessoaSelecionada.nomeMae, 160)
+            linha('Endereço:', pessoaSelecionada.endereco, 170)
+            linha('Bairro:', pessoaSelecionada.bairro, 180)
+            linha('Cidade:', pessoaSelecionada.cidade, 190)
+            linha('Batismo Espírito:', formatarSim(pessoaSelecionada.batismoEspirito), 200)
+            linha('Batismo Águas:', formatarSim(pessoaSelecionada.batismoAguas), 210)
+            linha('Função:', pessoaSelecionada.funcao, 220)
+
+            doc.setDrawColor(212, 160, 23)
+            doc.line(15, 226, 195, 226)
+
+            doc.save(pessoaSelecionada.nome + '.pdf')
+        }
     }
 })

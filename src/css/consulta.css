@@ -7,8 +7,7 @@ body {
     background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -48,7 +47,11 @@ header img {
 
 main {
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    flex: 1;
+    padding: 0 20px 40px 20px;
+    overflow-y: auto;
 }
 
 h1 {
