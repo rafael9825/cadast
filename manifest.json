@@ -1,0 +1,20 @@
+{
+    "name": "DEJEADALPE",
+    "short_name": "DEJEADALPE",
+    "start_url": "/cadast/login.html",
+    "display": "standalone",
+    "background_color": "#1a3a1a",
+    "theme_color": "#d4a017",
+    "icons": [
+        {
+            "src": "src/imh/dejeadalpe.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "src/img/Dejeadalpe.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
